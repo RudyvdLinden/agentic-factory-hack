@@ -195,6 +195,9 @@ In this step, you create the resources that will be used throughout the day.
 <summary>Deploy Azure resources</summary>
 
 ```bash
+# Register the Microsoft.AlertsManagement namespace for use in the subscription
+az provider register --namespace Microsoft.AlertsManagement
+
 # Ensure you are located in the challenge-0 directory
 cd challenge-0
 
