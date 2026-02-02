@@ -31,7 +31,7 @@ usage() {
     echo "Required parameters:"
     echo "  -u, --username        Azure AD username (email) to assign permissions to"
     echo "  -g, --resource-group  Name of the resource group to create"
-    echo "  -l, --location        Azure region (swedencentral, francecentral, eastus2)"
+    echo "  -l, --location        Azure region (swedencentral, francecentral, germanywestcentral, eastus2)"
     echo ""
     echo "Optional parameters:"
     echo "  -t, --tags            Additional tags in format 'key1=value1 key2=value2'"
@@ -95,9 +95,9 @@ if [ -z "$USERNAME" ] || [ -z "$RESOURCE_GROUP" ] || [ -z "$LOCATION" ]; then
 fi
 
 # Validate location
-if [[ ! "$LOCATION" =~ ^(swedencentral|francecentral|eastus2)$ ]]; then
+if [[ ! "$LOCATION" =~ ^(swedencentral|francecentral|germanywestcentral|eastus2)$ ]]; then
     log_error "Invalid location: $LOCATION"
-    echo "Allowed values: swedencentral, francecentral, eastus2"
+    echo "Allowed values: swedencentral, francecentral, germanywestcentral, eastus2"
     exit 1
 fi
 
