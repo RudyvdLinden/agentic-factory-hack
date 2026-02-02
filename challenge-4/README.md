@@ -194,6 +194,34 @@ The dashboard will start in your browser and show the resources.
 > Finished early? These tasks are **optional** extras for exploration.
 
 <details>
+<summary>Add an Executive Summary Agent to the Aspire Workflow</summary>
+
+Create a new **ExecutiveSummaryAgent** that takes the combined output from the final agent in the workflow and produces a concise, business-friendly summary of the entire maintenance operation.
+
+**What to explore:**
+- Create the agent in **Foundry Agent Service** (using a Python script or the Foundry Portal UI)
+- Update the Aspire workflow code to chain this new agent as the **last step** in the sequential orchestration
+- Consider what information from the previous agents would be most valuable in an executive summary
+
+This task exercises your understanding of how to extend an existing Aspire-hosted workflow with additional agents.
+
+</details>
+
+<details>
+<summary>Build a Declarative Workflow in Foundry Portal</summary>
+
+Use the **Foundry Portal** to create a declarative workflow that combines multiple agents without writing orchestration code.
+
+**What to explore:**
+- Use the existing **AnomalyClassificationAgent** and **FaultDiagnosisAgent** (already deployed in Agent Service)
+- Create a new **ExecutiveSummaryAgent** that summarizes the findings from the previous two agents
+- Stitch all three agents together into a single declarative workflow using the Foundry Portal UI
+
+This task lets you compare the declarative (portal-based) approach to workflow definition versus the programmatic (Aspire-hosted) approach you used in this challenge.
+
+</details>
+
+<details>
 <summary>Deploy to Azure Container Apps</summary>
 
 In this challenge we ran Aspire locally for development, but the same pattern can be deployed as a hosted application. The lab environment includes both an **Azure Container Registry** and a **Container Apps Environment**.
@@ -228,6 +256,8 @@ Extend the workflow with custom telemetry:
 - Export traces to **Application Insights**
 
 </details>
+
+
 
 ## 🛠️ Troubleshooting and FAQ
 

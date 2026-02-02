@@ -559,6 +559,8 @@ The agent had a system prompt with instructions how to behave and had two *local
 > **When do you need an agent?** This particular example could be solved *without* an agent — it's mainly mapping metrics to thresholds. The only thing we're using AI for here is generating a human-readable summary of the issue. However, using an agent (besides being a learning exercise) means we can add more tools in the future for more advanced reasoning. We also get built-in observability and memory (conversation history), which we'll examine in Challenge 3.
 >
 > You don't always need a full agent. You can use the **Azure AI Inference SDK** to call a model directly without going through an agent when your use case is simpler.
+>
+> **Agents and traditional code work well together.** An agent doesn't have to perform every step in a workflow. Traditional code is often better suited for deterministic logic like validation, filtering, or data transformation — tasks where the outcome should be predictable and consistent. A good rule of thumb: if your agent's system instructions are becoming very long and detailed with step-by-step rules, that's often a sign that some of that logic belongs in code rather than in the prompt. Use agents for reasoning, interpretation, and decisions that benefit from flexibility — and use code for everything else.
 
 
 
