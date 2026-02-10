@@ -49,6 +49,7 @@ Output format (STRICT):
     }
 
 Field rules:
+- KBArticleID: the knowledge base article ID that most closely
 - MachineId: the machine identifier from the input (e.g. "machine-001").
 - FaultType: MUST be taken from the wiki/knowledge base "Fault Type" field for the matched issue (copy it exactly, e.g. "mixing_temperature_excessive"). Do not invent new fault types.
 - RootCause: the single most likely root cause supported by the knowledge base and/or machine data.
